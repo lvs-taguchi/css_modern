@@ -9,12 +9,14 @@ body {
   font-size: 1.2rem;
   font-family: "Hiragino Kaku Gothic ProN",  Meiryo,  sans-serif;
 }
+
 * {
   box-sizing: border-box;
   &::before, &::after {
     box-sizing: border-box;
   }
 }
+
 a {
   &:link, &:visited, &:hover,&:active {
     color: #d03c56;
@@ -26,7 +28,7 @@ a {
  * parts
  * -------------------------------- */
 
-.clearfix::after { //clearfixを用いた直後の要素に関するクラス
+.clearfix::after { //clearfixを用いた直後の要素に関するクラス,
   content: '';
   display: block;
   //CSSで左右幅などのスタイル指定を行っていない状態でブラウザのウィンドウの左右いっぱいに表示され、さらにブロック要素の前後に改行が入るのが特徴
@@ -43,8 +45,6 @@ a {
 .hidden {
   display: none;
 }
-
-
 
 /* --------------------------------
  * header
@@ -75,6 +75,7 @@ a {
     height: 100%;//100%でないとロゴの画像全てがリンクにならないため100%にする
   }
 }
+
 .global-nav {
   margin-top: 15px;
   text-align: center;
@@ -99,29 +100,35 @@ a {
     }
   }
 }
+
 .wrapper {
   width: 970px;
   margin: 30px auto 40px;
 }
+
 .main {
   display: block;
   float: left;
   width: 660px;
 }
+
 .hot-topic {
   display: block;
   height: 300px;
   margin-bottom: 30px;
   box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.15); //画像の透明化
   transition: opacity 0.15s;
+  
   &:hover {
     opacity: 0.85;
   }
+
   .image {
     float: left;
     width: 50%;
     height: 100%;
   }
+
   .content {
     position: relative;
     float: left;
@@ -131,15 +138,18 @@ a {
     background-color: #7399D1;
     line-height: 1.6;
   }
+
   .title {
     margin-bottom: 15px;
     color: #fff;
     font-weight: normal;
     font-size: 2.0rem; //どれの2倍なのか
   }
+
   .desc {
     color: #ddc;
   }
+
   .date {
     position: absolute; //日付の位置は.contentの中で決まっているので絶対そこに表示したい
     top: 60px; //topプロパティは、ボックスを配置する場合の、上からの配置位置（距離）を指定
@@ -156,12 +166,12 @@ a {
   }
 }
 
-
 .scroll-list {
   max-height: 220px;  //list要素が多すぎる場合、死ぬほど縦長になる
   overflow-y: auto;  //はみ出た部分の表示に関する
   margin-bottom: 30px;
   list-style-type: none; //デフォルトのリストタグの点を消す
+  
   .scroll-item {
     a {
       display: block;
@@ -170,13 +180,16 @@ a {
       font-size: 0;
       transition: background-color 0.1s;
     }
-    &:nth-of-type(even) a {
-      background: url('../images/bg-slash.gif');
+
+    &:nth-of-type(even) a { //sassの関数調べる
+      background: url('bg-slash.gif');
     }
+
     a:hover {
       background-color: #fafaf8;
     }
   }
+
   .date {
     display: inline-block;
     width: 19%;
@@ -184,6 +197,7 @@ a {
     font-weight: bold;
     font-size: 1.0rem;
   }
+
   .category {
     display: inline-block;
     width: 8%;
@@ -260,13 +274,10 @@ a {
     width: 100%;
   }
 }
-
-
 .sidemenu {
   float: right;
   width: 275px;
 }
-
 .ranking {
   margin-bottom: 30px;
   list-style-type: none;
@@ -336,7 +347,6 @@ a {
     line-height: 1.5;
   }
 }
-
 .documents {
   margin: 10px 10px 30px;
   list-style-type: none;
@@ -359,7 +369,7 @@ a {
       > li {
         margin-bottom: 15px;
         padding-left: 10px;
-        background: url('../images/arrow.gif') no-repeat left center;
+        background: url('arrow.gif') no-repeat left center;
       }
     }
   }
@@ -367,7 +377,6 @@ a {
     text-decoration: underline;
   }
 }
-
 .search-box {
   padding: 15px;
   background-color: #ccc;
@@ -397,14 +406,12 @@ a {
 /* --------------------------------
  * footer
  * -------------------------------- */
-
 .footer {
   width: 100%;
   padding: 20px 0 30px;
-  background: #2d3d54 url('../images/bg-footer.gif');
+  background: #2d3d54 url('bg-footer.gif');
   color: #fff;
 }
-
 .horizontal-list {
   width: 970px;
   margin: 0 auto;
@@ -428,7 +435,6 @@ a {
     }
   }
 }
-
 .copyright {
   margin-top: 30px;
   text-align: center;
